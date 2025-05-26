@@ -1,0 +1,154 @@
+/**
+ * Copyright 2025 ariefsetyonugroho
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* Tabel agar mengisi seluruh lebar kontainer */
+.full-width-table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* Kolom Device */
+.full-width-table th:nth-child(1),
+.full-width-table td:nth-child(1) {
+    width: 20%;
+}
+
+/* Kolom Item */
+.full-width-table th:nth-child(2),
+.full-width-table td:nth-child(2) {
+    width: 50%;
+}
+
+/* Kolom Limit */
+.full-width-table th:nth-child(3),
+.full-width-table td:nth-child(3) {
+    width: 30%;
+}
+
+/* Padding kolom */
+.table th,
+.table td {
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+/* Border tabel */
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+/* Tabel responsif */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Pagination styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.pagination li {
+    list-style: none;
+    margin: 0 5px;
+}
+
+.pagination a,
+.pagination span {
+    padding: 8px 16px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.pagination .active a {
+    background-color: #007bff;
+    color: white;
+}
+
+.pagination a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Sidebar nav link */
+.nav-link {
+    font-size: 16px;
+    font-weight: 600;
+    color: #6c757d;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: white;
+    background-color: #ffc107;
+    border-radius: 5px;
+}
+
+.nav-link.active {
+    color: white;
+    background-color: #ffc107;
+    border-radius: 5px;
+}
+
+.nav-link i {
+    margin-right: 10px;
+}
+
+/* Logout button */
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.indicator-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: 10px;
+    background-color: gray;
+}
+
+/* APP */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: lightgray;
+    overflow: hidden;
+  }
+
+  .fixed-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+  }
+
+  .fixed-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1030;
+  }
+
+  .scrollable-content {
+    padding-top: 56px; /* height of navbar */
+    padding-bottom: 56px; /* height of footer */
+    height: 100vh;
+    overflow-y: auto;
+  }

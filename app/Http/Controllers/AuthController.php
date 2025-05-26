@@ -76,7 +76,7 @@ class AuthController extends Controller
     public function dashboard()
     {
         if (Auth::check()) {
-            return view('dashboard');
+            return view('contents.home');
         }
         return redirect("login")->with('error', 'You are not allowed to access');
     }
@@ -103,5 +103,13 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+    public function home()
+    {
+        return view('contents.home');
+    }
+    public function data()
+    {
+        return view('contents.data');
     }
 }
